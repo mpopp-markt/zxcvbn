@@ -9,3 +9,6 @@ lib
 *.swp
 *.swo
 tmux-*.log
+package-lock.json
+*.pyc
+

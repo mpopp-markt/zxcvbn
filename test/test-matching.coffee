@@ -323,6 +323,10 @@ test 'spatial matching', (t) ->
     [ '*-632.0214',   'mac_keypad', 9, 0 ]
     [ 'aoEP%yIxkjq:', 'dvorak',     4, 5 ]
     [ ';qoaOQ:Aoq;a', 'dvorak',    11, 4 ]
+    [ '!"§$%&/', 'qwertz',          1, 6 ]
+    [ '¹²³¼½¬', 'qwertz_altgr',     1, 5 ]
+    [ 'xcvbn', 'qwertz_altgr',      1, 0 ]
+    [ "<yxCvb", 'qwertz',           1, 1 ]
     ]
     _graphs = {}
     _graphs[keyboard] = adjacency_graphs[keyboard]
