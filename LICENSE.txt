@@ -1,3 +1,12 @@
+This software is modified in 2019 by Zaur Molotnikov to be more useful
+for Germany. No guarantees, no suitability, AS IS, see the notice below.
+Use it at your own risk after a careful review only. Original copyright
+applies as well.
+
+
+Original Copyright and License included below.
+---
+
 Copyright (c) 2012-2016 Dan Wheeler and Dropbox, Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining
