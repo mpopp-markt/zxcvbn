@@ -1,3 +1,22 @@
+# YXCVBN - German ZXCVBN
+
+This is a modification of the zxcvbn to match German language and German
+Keyboard (for Germany).
+
+All it is different from the original zxcvbn is the addition of a few
+German dictionaries, removal of English wikipedia dictionary, and
+addition of qwertz keyboard adjacency graphs.
+
+The produced results are better for the use in Germany.
+Please, check it out here: https://molotnikov.de/zxcvbn
+
+
+
+
+Original README.md follows:
+
+
+
 ```
 _________________________________________________/\/\___________________
 _/\/\/\/\/\__/\/\__/\/\____/\/\/\/\__/\/\__/\/\__/\/\________/\/\/\/\___
