@@ -34,6 +34,13 @@ qwertz_altgr = r'''
       y» x« c¢ v„ b“ n” mµ ,· .… -–
 '''.decode('utf-8')
 
+qwertz_altgr_shift = r'''
+°′ !¹ "² §³ $¼ %½ &¬ /{ ([ )] =} ?\ `¸
+    Q@ Wł E€ R¶ Tŧ Z← U↓ I→ Oø Pþ Ü¨ *~
+     Aæ Sſ Dð Fđ Gŋ Hħ J̣ Kĸ Lł Ö˝ Ä^ '’
+      Y» X« C¢ V„ B“ N” Mµ ;· :… _–
+'''.decode('utf-8')
+
 dvorak = r'''
 `~ 1! 2@ 3# 4$ 5% 6^ 7& 8* 9( 0) [{ ]}
     '" ,< .> pP yY fF gG cC rR lL /? =+ \|
@@ -120,6 +127,7 @@ if __name__ == '__main__':
         for graph_name, args in [('qwerty', (qwerty, True)), 
                                  ('qwertz', (qwertz, True)), 
                                  ('qwertz_altgr', (qwertz_altgr, True)),
+                                 ('qwertz_altgr_shift', (qwertz_altgr_shift, True)),
                                  ('dvorak', (dvorak, True)),
                                  ('keypad', (keypad, False)),
                                  ('mac_keypad', (mac_keypad, False))]:

@@ -183,7 +183,7 @@ test 'dictionary matching', (t) ->
   msg = "default dictionaries"
   check_matches msg, t, matches, 'dictionary', patterns, ijs,
     matched_word: patterns
-    rank: [322]
+    rank: [765]
     dictionary_name: ['us_tv_and_film']
 
   matching.set_user_input_dictionary ['foo', 'bar']
@@ -326,6 +326,7 @@ test 'spatial matching', (t) ->
     [ '!"§$%&/', 'qwertz',          1, 6 ]
     [ '¹²³¼½¬', 'qwertz_altgr',     1, 5 ]
     [ 'xcvbn', 'qwertz_altgr',      1, 0 ]
+    [ '>»X¢V“', 'qwertz_altgr_shift',      1, 3 ]
     [ "<yxCvb", 'qwertz',           1, 1 ]
     ]
     _graphs = {}

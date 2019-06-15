@@ -18,6 +18,7 @@ GRAPHS =
   qwerty:     adjacency_graphs.qwerty
   qwertz:     adjacency_graphs.qwertz
   qwertz_altgr:     adjacency_graphs.qwertz_altgr
+  qwertz_altgr_shift:     adjacency_graphs.qwertz_altgr_shift
 #  dvorak:     adjacency_graphs.dvorak
   keypad:     adjacency_graphs.keypad
   mac_keypad: adjacency_graphs.mac_keypad
