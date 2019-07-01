@@ -90,12 +90,12 @@ To pull in updates and bug fixes:
 bower update zxcvbn
 ```
 
-## Node / npm / MeteorJS (works for German version through github)
+## Node / npm / MeteorJS 
 
 zxcvbn works identically on the server.
 
 ``` shell
-$ npm install https://github.com/qutorial/zxcvbn.git
+$ npm install yxcvbn
 $ node
 > var zxcvbn = require('zxcvbn');
 > zxcvbn('Tr0ub4dour&3');
@@ -116,8 +116,8 @@ requirejs(["relpath/to/zxcvbn"], function (zxcvbn) {
 If you're using `npm` and have `require('zxcvbn')` somewhere in your code, browserify and webpack should just work.
 
 ``` shell
-$ npm install https://github.com/qutorial/zxcvbn.git
-$ echo "console.log(require('zxcvbn'))" > mymodule.js
+$ npm install yxcvbn
+$ echo "console.log(require('yxcvbn'))" > mymodule.js
 $ browserify mymodule.js > browserify_bundle.js
 $ webpack mymodule.js webpack_bundle.js
 ```
