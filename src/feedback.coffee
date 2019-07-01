@@ -4,8 +4,8 @@ feedback =
   default_feedback:
     warning: ''
     suggestions: [
-      "Use a few words, avoid common phrases"
-      "No need for symbols, digits, or uppercase letters"
+      "Nutzen Sie mehrere Wöreter, vermeiden Sie typische Phrasen"
+      "Man muss nicht unbedingt Symbole, Nummern und große Buchstaben nutzen"
     ]
 
   get_feedback: (score, sequence) ->
@@ -22,7 +22,7 @@ feedback =
     for match in sequence[1..]
       longest_match = match if match.token.length > longest_match.token.length
     feedback = @get_match_feedback(longest_match, sequence.length == 1)
-    extra_feedback = 'Add another word or two. Uncommon words are better.'
+    extra_feedback = 'Fügen Sie ein Paar Wörter dazu, untypische Wörter sind besser'
     if feedback?
       feedback.suggestions.unshift extra_feedback
       feedback.warning = '' unless feedback.warning?
@@ -40,77 +40,77 @@ feedback =
       when 'spatial'
         layout = match.graph.toUpperCase()
         warning = if match.turns == 1
-          'Straight rows of keys are easy to guess'
+          'Nacheinander folgende Tasten kann man leicht erraten'
         else
-          'Short keyboard patterns are easy to guess'
+          'Kurze Tastatur Kombinationen kann man leicht erraten'
         warning: warning
         suggestions: [
-          'Use a longer keyboard pattern with more turns'
+          'Nutzen Sie eine längere Kombination, wenden Sie häufiger'
         ]
 
       when 'repeat'
         warning = if match.base_token.length == 1
-          'Repeats like "aaa" are easy to guess'
+          'Wiederholende Buchstaben sind sehr leicht zu erraten'
         else
-          'Repeats like "abcabcabc" are only slightly harder to guess than "abc"'
+          'Wiederholungen wie "abcabcabc" sind unwessentlich besser als nur "abc"'
         warning: warning
         suggestions: [
-          'Avoid repeated words and characters'
+          'Vermeiden Sie wiederholende Wörter und Buchstaben'
         ]
 
       when 'sequence'
-        warning: "Sequences like abc or 6543 are easy to guess"
+        warning: "Sequenzen wie 6543 sind leicht zu erraten"
         suggestions: [
-          'Avoid sequences'
+          'Vermeiden Sie Sequencen'
         ]
 
       when 'regex'
         if match.regex_name == 'recent_year'
-          warning: "Recent years are easy to guess"
+          warning: "Letze Jahre sind leicht zu erraten"
           suggestions: [
-            'Avoid recent years'
-            'Avoid years that are associated with you'
+            'Vermeiden Sie letzte Jahre'
+            'Vermeiden Sie Jahre die mit Ihnen verbunden sind'
           ]
 
       when 'date'
         warning: "Dates are often easy to guess"
         suggestions: [
-          'Avoid dates and years that are associated with you'
+          'Vermeiden Sie Daten die mit Ihnen verbunden sind'
         ]
 
   get_dictionary_match_feedback: (match, is_sole_match) ->
     warning = if match.dictionary_name == 'passwords'
       if is_sole_match and not match.l33t and not match.reversed
         if match.rank <= 10
-          'This is a top-10 common password'
+          'Das ist ein von sehr häufigste und einfachste Passwörter'
         else if match.rank <= 100
-          'This is a top-100 common password'
+          'Das ist ein von häufigste Passwörter'
         else
-          'This is a very common password'
+          'Das ist ein von häufige Passwörter'
       else if match.guesses_log10 <= 4
-        'This is similar to a commonly used password'
-    else if match.dictionary_name == 'english_wikipedia'
+        'Das ist sehr ähnlich zu einem sehr häufigen Password'
+    else if match.dictionary_name in ['english_wikipedia', 'populaere']
       if is_sole_match
-        'A word by itself is easy to guess'
-    else if match.dictionary_name in ['surnames', 'male_names', 'female_names']
+        'Das ist ein einfaches Wort'
+    else if match.dictionary_name in ['surnames', 'male_names', 'female_names', 'vornamen', 'nachnamen']
       if is_sole_match
-        'Names and surnames by themselves are easy to guess'
+        'Namen und Vornamen selbst sind sehr leicht zu erraten'
       else
-        'Common names and surnames are easy to guess'
+        'Häufige Namen sind leicht zu erraten'
     else
       ''
 
     suggestions = []
     word = match.token
     if word.match(scoring.START_UPPER)
-      suggestions.push "Capitalization doesn't help very much"
+      suggestions.push "Große Buchstaben helfen nicht unbedingt"
     else if word.match(scoring.ALL_UPPER) and word.toLowerCase() != word
-      suggestions.push "All-uppercase is almost as easy to guess as all-lowercase"
+      suggestions.push "Ein Passwort aus allen großen Buchstaben ist genau so leicht wie aus kleinen."
 
     if match.reversed and match.token.length >= 4
-      suggestions.push "Reversed words aren't much harder to guess"
+      suggestions.push "Rückwärts schreiben hilft nicht"
     if match.l33t
-      suggestions.push "Predictable substitutions like '@' instead of 'a' don't help very much"
+      suggestions.push "Wenn man a auf @ ersetzt u.ä. bleibt das Passwort leicht zu erraten"
 
     result =
       warning: warning
