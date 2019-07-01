@@ -1,11 +1,11 @@
 {
-  "name": "zxcvbn",
-  "version": "4.4.2",
+  "name": "yxcvbn",
+  "version": "1.0.1",
   "description": "realistic password strength estimation",
-  "author": "Dan Wheeler",
+  "author": "Zaur Molotnikov, original author: Dan Wheeler",
   "license": "MIT",
-  "main": "lib/main.js",
-  "repository": "dropbox/zxcvbn",
+  "main": "dist/zxcvbn.js",
+  "repository": "qutorial/zxcvbn",
   "scripts": {
     "test": "coffeetape test/*.coffee | faucet",
     "test-saucelabs": "zuul -- test/*.coffee",
