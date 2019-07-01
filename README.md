@@ -13,7 +13,7 @@ Please, check it out here: https://molotnikov.de/zxcvbn
 
 
 
-Original README.md follows:
+Original README.md adapted to the German version where possible follows:
 
 
 
@@ -64,7 +64,7 @@ Integrations with other frameworks:
 
 zxcvbn detects and supports CommonJS (node, browserify) and AMD (RequireJS). In the absence of those, it adds a single function `zxcvbn()` to the global namespace.
 
-## Bower
+## Bower (will not work as is for German version)
 
 Install [`node`](https://nodejs.org/download/) and [`bower`](http://bower.io/) if you haven't already.
 
@@ -72,7 +72,7 @@ Get `zxcvbn`:
 
 ``` shell
 cd /path/to/project/root
-bower install zxcvbn
+bower install zxcvbn # english version installed
 ```
 
 Add this script to your `index.html`:
@@ -90,12 +90,12 @@ To pull in updates and bug fixes:
 bower update zxcvbn
 ```
 
-## Node / npm / MeteorJS
+## Node / npm / MeteorJS (works for German version through github)
 
 zxcvbn works identically on the server.
 
 ``` shell
-$ npm install zxcvbn
+$ npm install https://github.com/qutorial/zxcvbn.git
 $ node
 > var zxcvbn = require('zxcvbn');
 > zxcvbn('Tr0ub4dour&3');
@@ -111,12 +111,12 @@ requirejs(["relpath/to/zxcvbn"], function (zxcvbn) {
 });
 ```
 
-## Browserify / Webpack
+## Browserify / Webpack (works for German version through Github)
 
 If you're using `npm` and have `require('zxcvbn')` somewhere in your code, browserify and webpack should just work.
 
 ``` shell
-$ npm install zxcvbn
+$ npm install https://github.com/qutorial/zxcvbn.git
 $ echo "console.log(require('zxcvbn'))" > mymodule.js
 $ browserify mymodule.js > browserify_bundle.js
 $ webpack mymodule.js webpack_bundle.js
@@ -144,9 +144,9 @@ $ browserify --debug --standalone zxcvbn \
 * `-t coffeeify --extension='.coffee'` compiles `.coffee` to `.js` before bundling. This is convenient as it allows `.js` modules to import from `.coffee` modules and vice-versa. Instead of this transform, one could also compile everything to `.js` first (`npm run prepublish`) and point `browserify` to `lib` instead of `src`.
 * `-t uglifyify` minifies the bundle through UglifyJS, maintaining proper source mapping.
 
-## Manual installation
+## Manual installation (German version)
 
-Download [zxcvbn.js](https://raw.githubusercontent.com/dropbox/zxcvbn/master/dist/zxcvbn.js).
+Download [zxcvbn.js](https://raw.githubusercontent.com/qutorial/zxcvbn/master/dist/zxcvbn.js).
 
 Add to your .html:
 
@@ -156,7 +156,7 @@ Add to your .html:
 
 # Usage
 
-[try zxcvbn interactively](https://lowe.github.io/tryzxcvbn/) to see these docs in action.
+[try zxcvbn interactively](https://molotnikov.de/zxcvbn) to see these docs in action.
 
 ``` javascript
 zxcvbn(password, user_inputs=[])
@@ -278,7 +278,7 @@ Then try one of these alternatives:
 Bug reports and pull requests welcome!
 
 ``` shell
-git clone https://github.com/dropbox/zxcvbn.git
+git clone https://github.com/qutorial/zxcvbn.git
 ```
 
 zxcvbn is built with CoffeeScript, browserify, and uglify-js. CoffeeScript source lives in `src`, which gets compiled, bundled and minified into `dist/zxcvbn.js`.
