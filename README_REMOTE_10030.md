@@ -97,8 +97,8 @@ zxcvbn works identically on the server.
 ``` shell
 $ npm install yxcvbn
 $ node
-> var yxcvbn = require('yxcvbn');
-> yxcvbn('Tr0ub4dour&3');
+> var zxcvbn = require('zxcvbn');
+> zxcvbn('Tr0ub4dour&3');
 ```
 
 ## RequireJS
@@ -106,14 +106,14 @@ $ node
 Add [`zxcvbn.js`](https://raw.githubusercontent.com/dropbox/zxcvbn/master/dist/zxcvbn.js) to your project (using bower, npm or direct download) and import as usual:
 
 ``` javascript
-requirejs(["relpath/to/zxcvbn"], function (yxcvbn) {
-    console.log(yxcvbn('Tr0ub4dour&3'));
+requirejs(["relpath/to/zxcvbn"], function (zxcvbn) {
+    console.log(zxcvbn('Tr0ub4dour&3'));
 });
 ```
 
 ## Browserify / Webpack (works for German version through Github)
 
-If you're using `npm` and have `require('yxcvbn')` somewhere in your code, browserify and webpack should just work.
+If you're using `npm` and have `require('zxcvbn')` somewhere in your code, browserify and webpack should just work.
 
 ``` shell
 $ npm install yxcvbn
@@ -122,25 +122,25 @@ $ browserify mymodule.js > browserify_bundle.js
 $ webpack mymodule.js webpack_bundle.js
 ```
 
-But we recommend against bundling yxcvbn via tools like browserify and webpack, for three reasons:
+But we recommend against bundling zxcvbn via tools like browserify and webpack, for three reasons:
 
-* Minified and gzipped, yxcvbn is still several hundred kilobytes. (Significantly grows bundle size.)
-* Most sites will only need yxcvbn on a few pages (registration, password reset).
-* Most sites won't need `yxcvbn()` immediately upon page load; since `yxcvbn()` is typically called in response to user events like filling in a password, there's ample time to fetch `yxcvbn.js` after initial html/css/js loads and renders.
+* Minified and gzipped, zxcvbn is still several hundred kilobytes. (Significantly grows bundle size.)
+* Most sites will only need zxcvbn on a few pages (registration, password reset).
+* Most sites won't need `zxcvbn()` immediately upon page load; since `zxcvbn()` is typically called in response to user events like filling in a password, there's ample time to fetch `zxcvbn.js` after initial html/css/js loads and renders.
 
 See the [performance](#perf) section below for tips on loading zxcvbn stand-alone.
 
 Tangentially, if you want to build your own standalone, consider tweaking the browserify pipeline used to generate `dist/zxcvbn.js`:
 
 ``` shell
-$ browserify --debug --standalone yxcvbn \
+$ browserify --debug --standalone zxcvbn \
     -t coffeeify --extension='.coffee' \
     -t uglifyify \
-    src/main.coffee | exorcist dist/yxcvbn.js.map >| dist/yxcvbn.js
+    src/main.coffee | exorcist dist/zxcvbn.js.map >| dist/zxcvbn.js
 ```
 
-* `--debug` adds an inline source map to the bundle. `exorcist` pulls it out into `dist/yxcvbn.js.map`.
-* `--standalone yxcvbn` exports a global `yxcvbn` when CommonJS/AMD isn't detected.
+* `--debug` adds an inline source map to the bundle. `exorcist` pulls it out into `dist/zxcvbn.js.map`.
+* `--standalone zxcvbn` exports a global `zxcvbn` when CommonJS/AMD isn't detected.
 * `-t coffeeify --extension='.coffee'` compiles `.coffee` to `.js` before bundling. This is convenient as it allows `.js` modules to import from `.coffee` modules and vice-versa. Instead of this transform, one could also compile everything to `.js` first (`npm run prepublish`) and point `browserify` to `lib` instead of `src`.
 * `-t uglifyify` minifies the bundle through UglifyJS, maintaining proper source mapping.
 
@@ -151,12 +151,12 @@ Download [zxcvbn.js](https://raw.githubusercontent.com/qutorial/zxcvbn/master/di
 Add to your .html:
 
 ``` html
-<script type="text/javascript" src="path/to/yxcvbn.js"></script>
+<script type="text/javascript" src="path/to/zxcvbn.js"></script>
 ```
 
 # Usage
 
-[try yxcvbn interactively](https://lowe.github.io/tryzxcvbn/) to see these docs in action.
+[try zxcvbn interactively](https://molotnikov.de/zxcvbn) to see these docs in action.
 
 ``` javascript
 zxcvbn(password, user_inputs=[])

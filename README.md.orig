@@ -146,7 +146,11 @@ $ browserify --debug --standalone yxcvbn \
 
 ## Manual installation (German version)
 
+<<<<<<< HEAD
+Download [yxcvbn.js](https://raw.githubusercontent.com/qutorial/zxcvbn/master/dist/yxcvbn.js).
+=======
 Download [zxcvbn.js](https://raw.githubusercontent.com/qutorial/zxcvbn/master/dist/zxcvbn.js).
+>>>>>>> 1fbbc57d9982302216b41692e192094cfdf43545
 
 Add to your .html:
 
@@ -156,13 +160,17 @@ Add to your .html:
 
 # Usage
 
+<<<<<<< HEAD
 [try yxcvbn interactively](https://lowe.github.io/tryzxcvbn/) to see these docs in action.
+=======
+[try zxcvbn interactively](https://molotnikov.de/zxcvbn) to see these docs in action.
+>>>>>>> 1fbbc57d9982302216b41692e192094cfdf43545
 
 ``` javascript
-zxcvbn(password, user_inputs=[])
+yxcvbn(password, user_inputs=[])
 ```
 
-`zxcvbn()` takes one required argument, a password, and returns a result object with several properties:
+`yxcvbn()` takes one required argument, a password, and returns a result object with several properties:
 
 ``` coffee
 result.guesses            # estimated guesses needed to crack password

@@ -13,7 +13,7 @@ Please, check it out here: https://molotnikov.de/zxcvbn
 
 
 
-Original README.md adapted to the German version where possible follows:
+Original README.md follows:
 
 
 
@@ -64,7 +64,7 @@ Integrations with other frameworks:
 
 zxcvbn detects and supports CommonJS (node, browserify) and AMD (RequireJS). In the absence of those, it adds a single function `zxcvbn()` to the global namespace.
 
-## Bower (will not work as is for German version)
+## Bower
 
 Install [`node`](https://nodejs.org/download/) and [`bower`](http://bower.io/) if you haven't already.
 
@@ -72,7 +72,7 @@ Get `zxcvbn`:
 
 ``` shell
 cd /path/to/project/root
-bower install zxcvbn # english version installed
+bower install zxcvbn
 ```
 
 Add this script to your `index.html`:
@@ -90,12 +90,12 @@ To pull in updates and bug fixes:
 bower update zxcvbn
 ```
 
-## Node / npm / MeteorJS 
+## Node / npm / MeteorJS
 
 zxcvbn works identically on the server.
 
 ``` shell
-$ npm install yxcvbn
+$ npm install zxcvbn
 $ node
 > var yxcvbn = require('yxcvbn');
 > yxcvbn('Tr0ub4dour&3');
@@ -111,7 +111,7 @@ requirejs(["relpath/to/zxcvbn"], function (yxcvbn) {
 });
 ```
 
-## Browserify / Webpack (works for German version through Github)
+## Browserify / Webpack
 
 If you're using `npm` and have `require('yxcvbn')` somewhere in your code, browserify and webpack should just work.
 
@@ -144,9 +144,9 @@ $ browserify --debug --standalone yxcvbn \
 * `-t coffeeify --extension='.coffee'` compiles `.coffee` to `.js` before bundling. This is convenient as it allows `.js` modules to import from `.coffee` modules and vice-versa. Instead of this transform, one could also compile everything to `.js` first (`npm run prepublish`) and point `browserify` to `lib` instead of `src`.
 * `-t uglifyify` minifies the bundle through UglifyJS, maintaining proper source mapping.
 
-## Manual installation (German version)
+## Manual installation
 
-Download [zxcvbn.js](https://raw.githubusercontent.com/qutorial/zxcvbn/master/dist/zxcvbn.js).
+Download [yxcvbn.js](https://raw.githubusercontent.com/qutorial/zxcvbn/master/dist/yxcvbn.js).
 
 Add to your .html:
 
@@ -159,10 +159,10 @@ Add to your .html:
 [try yxcvbn interactively](https://lowe.github.io/tryzxcvbn/) to see these docs in action.
 
 ``` javascript
-zxcvbn(password, user_inputs=[])
+yxcvbn(password, user_inputs=[])
 ```
 
-`zxcvbn()` takes one required argument, a password, and returns a result object with several properties:
+`yxcvbn()` takes one required argument, a password, and returns a result object with several properties:
 
 ``` coffee
 result.guesses            # estimated guesses needed to crack password
@@ -278,7 +278,7 @@ Then try one of these alternatives:
 Bug reports and pull requests welcome!
 
 ``` shell
-git clone https://github.com/qutorial/zxcvbn.git
+git clone https://github.com/dropbox/zxcvbn.git
 ```
 
 zxcvbn is built with CoffeeScript, browserify, and uglify-js. CoffeeScript source lives in `src`, which gets compiled, bundled and minified into `dist/zxcvbn.js`.
