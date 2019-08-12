@@ -11,6 +11,85 @@ The produced results are better for the use in Germany.
 Please, check it out here: https://molotnikov.de/zxcvbn
 
 
+## Usage
+
+### Angular >=2 
+
+First install it with:
+
+```
+npm i yxcvbn
+```
+
+Then use it as a script in angular.json:
+```
+...
+            "scripts": [
+              "node_modules/yxcvbn/dist/zxcvbn.js",
+              ...
+            ],
+...
+```
+
+Finally, use it in a component:
+
+```
+export interface ZxcvbnResult {
+  password: string;
+  score: number;
+  feedback: {
+    warning: string;
+    suggestions: string[];
+  }
+};
+
+declare var zxcvbn: (password: string) => ZxcvbnResult;
+
+// then call it for instance in a password change function
+
+  onPasswordChange() {
+    let test = zxcvbn(this.password);
+    this.warning = test.feedback.warning;
+    this.suggestions = test.feedback.suggestions;
+    this.score = 25 * test.score;
+  }
+  
+```
+
+
+### Use in React
+
+First install it with
+```
+npm i yxcvbn
+```
+
+Then use it like this:
+
+```
+import React, { useState } from 'react';
+// your other imports
+...
+
+const yxcvbn = require('yxcvbn');
+
+...
+
+// then use it anywhere on a password string:
+
+<form
+     
+          onSubmit={(e: React.BaseSyntheticEvent) => {
+            e.preventDefault();
+            yxcvbn(e.target.elements.setPassword.value);
+            setMinimumCharactersError(false);
+          }}
+        >
+```
+
+
+
+
 
 
 Original README.md adapted to the German version where possible follows:

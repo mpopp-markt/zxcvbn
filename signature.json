@@ -1,0 +1,143 @@
+{
+  "version": "v1alpha",
+  "files": [
+    {
+      "path": "Makefile",
+      "sha512": "37f53a4112f0e10afc2e6073309d4b35e2c4796301601881624d96933d91c501511ae9f063189a55768c0157bec750eca28f5e2da9269c512c4b70b1bbde0ced"
+    },
+    {
+      "path": "src/adjacency_graphs.coffee",
+      "sha512": "c3c32c438f945b7ca7d5a40213fe621e8bab58b5b3a16454f68704c20dd6f105ee3205550db0665d9ee7234db1366702cf0a11cc29c0d9416edc914bb3e19843"
+    },
+    {
+      "path": "src/feedback.coffee",
+      "sha512": "951010da48a9784e34b1262449d889a3a105cf5550708f615fd9b54ba59c7d4bade605c8ad2792255b18d7b717e9f1ad6656c8e58093e7016883bc727819a25c"
+    },
+    {
+      "path": "src/frequency_lists.coffee",
+      "sha512": "a8ba82a42109086c09c967daec83af557125ddb970bcdc808420eda8820346c00a457aa7a780a2ce1bda4ad26681a52fb5ee0ba34d029df8feb7d4797484fc06"
+    },
+    {
+      "path": "src/main.coffee",
+      "sha512": "6526e83344baaa14f26d64a5237c9e622099e53c4bd7a647a2d0e2f00de9f35d009bc2f427277a13eef5223594c6c9c045c356e37d1ae922cd193ca8b7f09e85"
+    },
+    {
+      "path": "src/matching.coffee",
+      "sha512": "53d65bead960c898042cb2e1801e7b7928b6d4d75e54619c28dcb008bec6c35a60f5f25041b138b2a80bc96fceb42d86459da0a679f13a084c59e726303ecf01"
+    },
+    {
+      "path": "src/scoring.coffee",
+      "sha512": "ef4f7218b59b46def558404be620cb033f4dafa10cdf1724033131366020754ba1039e006cef7b32f956215946d86bfc5f0e077dc3be44a5257ae2714e898c28"
+    },
+    {
+      "path": "src/time_estimates.coffee",
+      "sha512": "2fb6df983b08a9163514cc3b287d284aafa8a7a00b3c5f5f98dea9b4a936008629dd4ad0353c671e45150636ef888e4929c59133aac3d7d4399dd840ad7fd12b"
+    },
+    {
+      "path": "lib/adjacency_graphs.js",
+      "sha512": "101a65354794877aa943858bc220c020efda14d5b47bc437397792d511e778dc6c94c013951f25a92798b7fef3c78b2de099bbbe84ee3f18fd69dcec39a23c96"
+    },
+    {
+      "path": "lib/feedback.js",
+      "sha512": "183a7c4023cf09e0b87e3e8f7a0ed1a8e21d104dda35499a2f0a0e3aa47f690ad48355377f552d1146b37def284e4fa98b78e1749677c2bbbeae55fe7914c29b"
+    },
+    {
+      "path": "lib/frequency_lists.js",
+      "sha512": "dc409c4bb8cecbfc038147a58e2b6a0d50bbfec98ae3e9efa608aba8e0ed91a970b707f5dbfccf33e5e20e6a4e245e2d66052fdf7438d36c4096438141d5215c"
+    },
+    {
+      "path": "lib/main.js",
+      "sha512": "1856761c61c783544dbdaae81748cecee26a570fcabdb924b53f811c77d24b93ce35b27c8bc64fbc70a92077685cfde4fdbfdb586581943d1b16f647daaa4aca"
+    },
+    {
+      "path": "lib/matching.js",
+      "sha512": "557e1974055f9f4ec3fb2a56f0ad740016efc4b5d40eb4f43ae15ddceb23e252de888c01eccae8b75a5980d3dda8445317e8fafa7783266e8f18778f14f4525a"
+    },
+    {
+      "path": "lib/scoring.js",
+      "sha512": "0e09110484cf0b8a57c7979ae5110dbd24fd54a8b3e40dd600deb81ff1adaa3043858eda3beb4277bb840a2f87e6a879adceef0c421efc2134af66acaae4d60f"
+    },
+    {
+      "path": "lib/time_estimates.js",
+      "sha512": "86ffc1495ea9e8b108692f797a22b2f82f1f5b754910038046cbbb76fcad36e09d406d0415353effc31ee4a081fb39b34a026060341cd825aa9afe643e3a851d"
+    },
+    {
+      "path": "dist/zxcvbn.js",
+      "sha512": "c2cc77cbce6d0572e3a5ac7b7efd6990f5a2ae8310bc8bca040ad0ff2b69f7e495a31f0a7d0dcae8cbaf4add9ca7cc789d8148972eadb42adb85f646163c09ed"
+    },
+    {
+      "path": "package.json",
+      "sha512": "48ec40dbfcf2e633289c567812f7dcba2b7ee3cc0d09192074c52a3774c3ac2e049d905fc93e456c32634419705f23548aa1f911c1e814d87d25f5c853c865f4"
+    },
+    {
+      "path": "lib/adjacency_graphs.js.map",
+      "sha512": "00027d6ca3d8d36b051bdfbd3af1fb2b4a82979ef8b530f4c56d4c0451d6d26a122853418f28471484aa5c0c2043e627c2bbc8a87726738b85c23c18043b72ac"
+    },
+    {
+      "path": "lib/feedback.js.map",
+      "sha512": "af8adaac84caa632c3281ce0d8420846d74ee9ccd92d501987403e91b314b993f803d17cd0e5485fc8fcd19d9d42ade5eac9502cdcf36c099b01af3819ec791b"
+    },
+    {
+      "path": "lib/frequency_lists.js.map",
+      "sha512": "5eb43bb0ecec75fc8f227618f23e20b114fa66e8fcc339c7924c6f82ffec26011a6b33e9317cc4893f92f63e2206f34baec0ea87dbb3b27f9745b89502b69f0c"
+    },
+    {
+      "path": "lib/main.js.map",
+      "sha512": "8c6777144aba2f319a63ff24a6c7ec6362f1a569662121bc5346632d9cb4054c619381ef994fdd1af942a2e207e2f1cbc22517f5d5231b8c9c1758da881bbfde"
+    },
+    {
+      "path": "lib/matching.js.map",
+      "sha512": "eacc005e41c0647b8f9b219eacd0459e04c1ce2cc571ca7e7199f1506f90990087a742d5f03c2e8daabac8594250695cea3639dbde7ef91c2782d90980a857ad"
+    },
+    {
+      "path": "lib/scoring.js.map",
+      "sha512": "2a900b5986e5ec855096dbd7ceafc7cd79b9643bad7bef69e237e4e69094931ccbeaf21a01942fa4f0699c2d72219312d1c99a2392d89fb7a7cfc7d910aca4f3"
+    },
+    {
+      "path": "lib/time_estimates.js.map",
+      "sha512": "1ae211b95864895368ec2dd1ef934039d6392f626e876ccde425e5ee78454e36af69c5150ddc81a16f22bdcde1683a54de97791f6730c66c20a56f4e30b65f1e"
+    },
+    {
+      "path": "dist/zxcvbn.js.map",
+      "sha512": "863b23f7a812f97368cb2d139a5f925f96dd46fb2d0b478bb489c726b2861199676ddab170647654bbcd61bac7ee279d6263d6b454f29ca5c52c606785f40eca"
+    },
+    {
+      "path": "README_BACKUP_10030.md",
+      "sha512": "b3b838057472bf0073f1a2c721df9336b39ff7f7d55e0d6f93ee1c2c1dc29ed9de7e1ffc79e5b1ebdfb92e0a8fb50e3e55bf689f4de12a83890e9488635daa5f"
+    },
+    {
+      "path": "README_BASE_10030.md",
+      "sha512": "47a6f462106e7a9e5f427ebb9619e53efc742d2a274919601af04a15505935b65691f3d84d50cdaf2eef1acb5b3a8655dec7b108057cc4dff94dee57ae9eb5dd"
+    },
+    {
+      "path": "README_LOCAL_10030.md",
+      "sha512": "1574aa766cd9253fb81e3eabc90829f42b84ab514dca2708fea473c166a4a25596d76426e2cdd4a2604422cc74d16e0febe9f5cea284f825d05928ae36a1a5cc"
+    },
+    {
+      "path": "README_REMOTE_10030.md",
+      "sha512": "622a83fc2f04d194eb02b984f7fd3688b1f12489c8b578c52c688f7f6d5a59373ca0a551b402a766ca327a5bbe950ac4614b0d6e4380e29f55e558a9e2db788f"
+    },
+    {
+      "path": "README.md",
+      "sha512": "699b260bc24f71330cb538e9ca667cbe29b2df8581518e9b04094d07c0555464f53f0f050f5fd7b2c644a325464882f69dc2d2ea8976274e84b7d156fdfa98d3"
+    },
+    {
+      "path": "README.md.orig",
+      "sha512": "b3b838057472bf0073f1a2c721df9336b39ff7f7d55e0d6f93ee1c2c1dc29ed9de7e1ffc79e5b1ebdfb92e0a8fb50e3e55bf689f4de12a83890e9488635daa5f"
+    },
+    {
+      "path": "LICENSE.txt",
+      "sha512": "be4d720260b149bc537a20c0af1ce65b005cb4ac7584fc2c99f68359080d6723b7d75ebb04695ad0d558c6f38a760d47a2548423637b303a1b4788ad2f83609e"
+    },
+    {
+      "path": ".travis.yml",
+      "sha512": "c15fdb83c58b733645291b073dc7bc0d7c1022bcaaf89a1285ee0239fd340ae92033e8f69546dff16638009b63f1d93013b59b431427c5d4b42a3d0ee05863ab"
+    },
+    {
+      "path": ".zuul.yml",
+      "sha512": "e11b7e56bf7816c04fff53f46f70de9650d4ad08288a7d768e6cf5ee1db20e8086d84ae5119384b51fc9afe86ca43b4c529e4619c7275526dff997df88f0da41"
+    }
+  ],
+  "signature": "-----BEGIN PGP SIGNATURE-----\nVersion: OpenPGP.js v2.6.2\nComment: https://openpgpjs.org\n\nwsFcBAEBCAAQBQJdUSn4CRC2MzQPtt01LwAA1DcQAL5rnDPuj2X7E1IVdIUp\nnDy4NKjdg9QLrLCRHgoX6AMR26Emy1vEjmrl5Pe8RTxMbjdnDcBmIyu1SE80\n0v1ERMufVo4VDK0yhF4PjCnseS8NAvoeqd+zrApTKpqY5VugklJ2ceZIbFsP\nvt0JzquCXhNspqnJ+oXoKcKI6TED9f93Nd/pCfm47c3gK0+JVFjzqq5JaFzS\n1JOJ2HVfQ8UdlYqKYiiD/inrVzMl5b8HE4nFTfTe+e0DoqsAYEk7qBThY1w8\nY8jL6EYtYvtsyV2s+z9yAyR537oRvAnZj0gD/tQXeXb0SlQJWQnUtASffvN1\ntvQLEm/WiTYSrbcOqkilHPs/dV3FfuVbptQEj8xt7Ct/J35aI2SfUhE1pwYs\nVtHhO8+YP5ypUPcoUHKHkvWgO+PMf8ULKt0BSE4h55H4xXCM9uc/8X/ed87a\nfxC2Reh8F+CC35SdvF8sJ1pp98JyZ8VqQg9qi0B674+wJ/TaSOdwelXCLI8e\nWvpANhwUO3CPjQDDB2rsLMNfSY7f5BBumKRyokgEHNXICUX+QW0tWNyW2zrg\nP0fKWtZpL+ypNFHoohrsyRCqNOKzISxFeLz6ycC7ObpaDGCLHkI9Fim4kwt9\nGca//AypsvvjpJMCVnxuCXx9NGjlfl4U6I+3JV6x4l5+CJTuHwnQO3sE10Dt\nFxMj\n=0+/q\n-----END PGP SIGNATURE-----\n",
+  "identity": {}
+}
