@@ -1,6 +1,6 @@
 {
   "name": "yxcvbn",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "realistic password strength estimation",
   "author": "Zaur Molotnikov, original author: Dan Wheeler",
   "license": "MIT",
