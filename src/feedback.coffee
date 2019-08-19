@@ -13,9 +13,13 @@ feedback =
     return @default_feedback if sequence.length == 0
 
     # no feedback if score is good or great.
-    return if score > 2
+    return if score == 4
       warning: ''
       suggestions: []
+
+    return if score > 2
+      warning: ''
+      suggestions: ['Geben Sie noch weitere Begriffe ein. Seltene Wörter sind besser.']
 
     # tie feedback to the longest match for longer sequences
     longest_match = sequence[0]
