@@ -56,7 +56,7 @@ feedback =
         warning = if match.base_token.length == 1
           'Wiederholen Sie keine Buchstabenfolgen, wie z.B. „abcabcabc“.'
         else
-          'Wiederholungen wie "abcabcabc" sind unwessentlich besser als nur "abc"'
+          'Wiederholungen wie "abcabcabc" sind unwesentlich besser als nur "abc".'
         warning: warning
         suggestions: [
           'Wählen Sie stattdessen lieber einen langen Satz aus.'
